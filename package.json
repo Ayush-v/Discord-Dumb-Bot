@@ -1,0 +1,19 @@
+{
+  "name": "myfirst-discortbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/rest": "^1.1.0",
+    "discord.js": "^14.3.0",
+    "dotenv": "^16.0.2",
+    "eslint": "^8.23.0"
+  }
+}
