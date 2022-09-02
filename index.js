@@ -1,7 +1,7 @@
 const dotenv = require("dotenv");
 // Require the necessary discord.js classes
 const { Client, GatewayIntentBits } = require("discord.js");
-const { token } = require("./config.json");
+// const { token } = require("./config.json");
 
 dotenv.config();
 
@@ -21,9 +21,8 @@ client.on("interactionCreate", async (interaction) => {
   if (commandName === "ping") {
     await interaction.reply("Pong!");
   } else if (commandName === "server") {
-    await interaction.reply(
-      `Server name: ${interaction.guild.name}\nTotal members: ${interaction.guild.memberCount}`
-    );
+    console.log(interaction.guild);
+    await interaction.reply(`Server name:`);
   } else if (commandName === "user") {
     await interaction.reply(
       `Your tag: ${interaction.user.tag}\nYour id: ${interaction.user.id}`
@@ -34,4 +33,4 @@ client.on("interactionCreate", async (interaction) => {
 });
 
 // Login to Discord with your client's token
-client.login(token);
+client.login(process.env.TOKEN);
